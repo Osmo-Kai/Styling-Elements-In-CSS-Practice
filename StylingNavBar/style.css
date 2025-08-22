@@ -1,0 +1,146 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f4f4f4;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Navbar */
+    nav {
+      background: #1e1e2f;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin: 0 14px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #00adb5;
+    }
+
+    /* Dark Mode Toggle */
+    .toggle-btn {
+      background: #00adb5;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 20px;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+      margin-left: 20px;
+      transition: 0.3s;
+    }
+
+    .toggle-btn:hover {
+      background: #008b91;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      background: white;
+      height: 3px;
+      width: 25px;
+      margin: 4px;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: -100%;
+        background: #1e1e2f;
+        flex-direction: column;
+        width: 220px;
+        text-align: center;
+        padding: 20px 0;
+        transition: right 0.3s ease-in-out;
+      }
+
+      .nav-links.active {
+        right: 0;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .toggle-btn {
+        margin-top: 10px;
+      }
+    }
+
+    /* Sections */
+    section {
+      height: 100vh;
+      padding: 80px 20px;
+    }
+
+    #home { background: #222831; color: white; }
+    #about { background: #eeeeee; }
+    #skills { background: #393e46; color: white; }
+    #projects { background: #eeeeee; }
+    #contact { background: #222831; color: white; }
+
+    /* Dark Mode */
+    body.dark {
+      background: #121212;
+      color: #f4f4f4;
+    }
+
+    body.dark nav {
+      background: #121212;
+    }
+
+    body.dark .nav-links a {
+      color: #ddd;
+    }
+
+    body.dark .nav-links a.active {
+      color: #00adb5;
+    }
